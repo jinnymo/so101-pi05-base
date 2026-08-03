@@ -40,6 +40,11 @@ viewpoints these robots are usually recorded from, so that a task fine-tune conv
 demonstrations than one started from `lerobot/pi05_base`. What it does not provide is dependable
 behavior on any particular task, because no particular task was the training objective.
 
+Running an untuned VLA checkpoint on a real arm is unsafe. That holds for the backbones this work
+started from and it holds for this one: without a task fine-tune the output is erratic, and an
+erratic action stream on a physical arm damages the arm or whatever it reaches. Evaluate in dry
+run first, keep the joint-angle abort in place, and stay within reach of the stop.
+
 ## Model description
 
 pi0.5 is roughly 3.62B parameters in two parts:

@@ -8,6 +8,44 @@ documentation needed to repeat the work.
 The checkpoint is a domain-adaptation base, not a finished policy: it is the starting point of
 a task-specific fine-tune.
 
+## Why this exists
+
+A pretrained VLA checkpoint is not usable on a real arm as it ships. Every backbone tried here —
+GR00T N1.7, SmolVLA, pi0, pi0.5 — had to be fine-tuned before it produced motion worth running on
+hardware. Untuned output is erratic, and erratic output on a real arm is a hazard, not a poor
+score. Fine-tuning is the precondition, not an optimization.
+
+That moves the problem to data. A task fine-tune needs demonstrations, and recording them one at a
+time does not get far. This corpus is an attempt to pay that cost once: 156 public SO-101 datasets
+merged into one and used to adapt pi0.5 to the robot rather than to any task, so a task fine-tune
+on top starts from something that already knows the arm.
+
+### Why pi0.5
+
+Several backbones were fine-tuned on the same data with LoRA and run on the same SO-101 hardware.
+The pi0 family behaved best. No controlled benchmark was run and none is claimed: the comparison
+was LoRA fine-tunes judged by closed-loop behavior on real hardware, which was clear enough in
+that setting to decide the direction but is not a measurement.
+
+### Why VLASH
+
+Chunked action prediction leaves a gap. While the current chunk executes, the next inference has
+not started, and the arm stops for the length of the forward pass. Measured on this setup,
+synchronous inference stalled 13.7% of wall clock locally and 44% over a cloud link.
+
+Overlapping the next inference with the current chunk closes that gap and exposes a second
+problem: the first action of a new chunk does not continue the last action of the old one. A
+stationary arm oscillated 1-2 degrees at every chunk boundary, and widening the overlap window to
+533 ms did not remove it, which ruled out latency as the cause.
+
+VLASH samples a random inference delay during training and blends across the chunk boundary at
+run time. That is what removed the oscillation: 75%, 89% and 26% reduction across three joints in
+the hold phase. LeRobot's asynchronous path averages the overlapping actions instead, and the
+average of two valid trajectories is not necessarily a valid trajectory.
+
+VLASH supports pi0 and pi0.5, and does not support GR00T. The backbone and the inference stack
+were therefore one decision rather than two.
+
 ## Start here
 
 [`docs/01-overview.md`](docs/01-overview.md) — what was built, the result, the pipeline in
