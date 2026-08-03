@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.swp
+build/
+dist/
+*.egg-info/
+*.log
+
+# Fetched by scripts/fetch-tokenizer.sh; gated upstream, never committed.
+paligemma_tokenizer_flat/

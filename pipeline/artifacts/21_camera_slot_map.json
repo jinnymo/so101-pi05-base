@@ -1,0 +1,3582 @@
+{
+  "external/tier1/CoRL2026-CSI__IsaacLab-SO101-PullCube-100epi-10fps-appendix": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.left_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.left_wrist"
+    ]
+  },
+  "external/tier1/CoRL2026-CSI__SO101-teleop_stack_RGBblock_on_bluedish_150epi_10fps": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.left_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.left_wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/Damin3927__so101_pickplace": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/ankithreddy__so101_pickplace_tools": {
+    "slots": {
+      "base_0_rgb": "observation.images.images.top",
+      "left_wrist_0_rgb": "observation.images.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.images.wrist",
+      "observation.images.images.top"
+    ]
+  },
+  "external/tier1/ankithreddy__so101_pickplace_uno": {
+    "slots": {
+      "base_0_rgb": "observation.images.images.top",
+      "left_wrist_0_rgb": "observation.images.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.images.wrist",
+      "observation.images.images.top"
+    ]
+  },
+  "external/tier1/anvilbot-patrickhhh__SO101_PickAndPlace_3cams": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/avea-robotics__so101_chess_pick_place_merged": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/azaracla__so101_pick_3dprint": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/brcg3__so101_test": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/bukoi__so101_pick_place": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/dohoon2665__so101_pick_and_place": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/dohoon2665__so101_pick_and_place_random": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/gimarchetti__so101-winnie-us5": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper"
+    ]
+  },
+  "external/tier1/gimarchetti__so101-winnie-us7": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper"
+    ]
+  },
+  "external/tier1/ichbinblau__so101_stack2cubes_dataset": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.side"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.side",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/joadv__so101-test": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/jrkhf__so101_wrist_top_cameras_set_1": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/jrkhf__so101_wrist_top_cameras_set_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_on_conveyor_fast_training": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_on_conveyor_fast_training-smolvla": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_on_conveyor_mix_training-smolvla": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_on_conveyor_slow_training": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_on_conveyor_slow_training-smolvla": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_yellow_block_on_conveyor_fast": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.eval"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top",
+      "observation.images.eval"
+    ]
+  },
+  "external/tier1/k1000dai__so101_put_yellow_block_on_conveyor_slow": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.eval"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top",
+      "observation.images.eval"
+    ]
+  },
+  "external/tier1/littledragon__so101_sock_stowing2": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.endeffector",
+      "right_wrist_0_rgb": "observation.images.base"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.base",
+      "observation.images.top",
+      "observation.images.endeffector"
+    ]
+  },
+  "external/tier1/littledragon__so101_sock_stowing2_boxes": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.endeffector",
+      "right_wrist_0_rgb": "observation.images.base"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.base",
+      "observation.images.top",
+      "observation.images.endeffector"
+    ]
+  },
+  "external/tier1/m3__lerobot_so101_block2box": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.handeye",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.handeye",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/observabot__so101_die_mat4": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.endeffector",
+      "right_wrist_0_rgb": "observation.images.base"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.base",
+      "observation.images.top",
+      "observation.images.endeffector"
+    ]
+  },
+  "external/tier1/piuslim373__so101-transfer-capsule": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper"
+    ]
+  },
+  "external/tier1/piuslim373__so101-transfer-capsule2": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper"
+    ]
+  },
+  "external/tier1/piuslim373__so101-transfer-capsule3": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper",
+      "observation.images.front"
+    ]
+  },
+  "external/tier1/piuslim373__so101-transfer-capsule4": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper",
+      "observation.images.front"
+    ]
+  },
+  "external/tier1/piuslim373__so101-transfer-capsule5": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.gripper",
+      "observation.images.front"
+    ]
+  },
+  "external/tier1/r2owb0__so101-DS1": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/tshiamor__so101-blacokc-horizontal-layComb1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.endeff",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [
+      "observation.images.endeff_ir",
+      "observation.images.side"
+    ],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.endeff",
+      "observation.images.top",
+      "observation.images.front",
+      "observation.images.side",
+      "observation.images.endeff_ir"
+    ]
+  },
+  "external/tier1/tshiamor__so101-block-horizontal-layComb12": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.endeff",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [
+      "observation.images.endeff_ir",
+      "observation.images.side"
+    ],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.endeff",
+      "observation.images.top",
+      "observation.images.front",
+      "observation.images.side",
+      "observation.images.endeff_ir"
+    ]
+  },
+  "external/tier1/tshiamor__so101-block-top-endeff-only": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.endeff",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.endeff",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/un1c0rnio__so101_eraser_mat1": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.endeffector",
+      "right_wrist_0_rgb": "observation.images.base"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.base",
+      "observation.images.top",
+      "observation.images.endeffector"
+    ]
+  },
+  "external/tier1/zacapa__SO101_AVE_07": {
+    "slots": {
+      "base_0_rgb": "observation.images.overhead",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier1/zacapa__SO101_chess_test2_6": {
+    "slots": {
+      "base_0_rgb": "observation.images.overhead",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier1/zacapa__SO101_chess_test7": {
+    "slots": {
+      "base_0_rgb": "observation.images.overhead",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier1/zacapa__SO101_cube_test2": {
+    "slots": {
+      "base_0_rgb": "observation.images.overhead",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier1/zaringleb__pick_colored_cube_so101": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/zaringleb__pick_single_cube_so101": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier1/zaringleb__pick_single_cube_so101_with_corrective_actions": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/5hadytru__so101_IF_1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/5hadytru__so101_IF_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/5hadytru__so101_IF_3": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/5hadytru__so101_grasp_1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/5hadytru__so101_grasp_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/5hadytru__so101_grasp_3": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/Benxiaogu__SO101-full": {
+    "slots": {
+      "base_0_rgb": null,
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "base_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/CrawlAiHuggingFace__multiplied_so101-table-cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/DeanSu948__so101_test_0815": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/EverNorif__so101-table-cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/EverNorif__so101_place_orange_isaaclab": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/Jaehooni__smolvla_so101_pick_and_place": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/JiabinQ__so101_pick_place": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/Kazu1232__record-so101-A_warp50": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/Kazu1232__record-so101-B_warp50": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/Kazu1232__record-so101-C_warp50": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/Kazu1232__record-so101-warp-ABC-reverse_A50": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/Kazu1232__record-so101-warp-ABC-reverse_B50": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/Kazu1232__record-so101-warp-ABC-reverse_C50": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/LeRobot-worldwide-hackathon__241-Sushi_Shinkansen_So101-pick_sushi": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/LightwheelAI__so101-pick-pen": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/LightwheelAI__so101-place-orange": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/LittleFire99__so101_test_1": {
+    "slots": {
+      "base_0_rgb": "observation.images.fixed",
+      "left_wrist_0_rgb": "observation.images.handeye",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.handeye",
+      "observation.images.fixed"
+    ]
+  },
+  "external/tier2/Rayenghali__combined_so101_follower_put_the_red_lego_block_in_the_black_cup_eps100_fps30": {
+    "slots": {
+      "base_0_rgb": "observation.images.up_view",
+      "left_wrist_0_rgb": "observation.images.wrist_view",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist_view",
+      "observation.images.up_view"
+    ]
+  },
+  "external/tier2/Rayenghali__so101_red_lego_pick_and_place": {
+    "slots": {
+      "base_0_rgb": "observation.images.up_view",
+      "left_wrist_0_rgb": "observation.images.wrist_view",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist_view",
+      "observation.images.up_view"
+    ]
+  },
+  "external/tier2/SGPatil__so101-table-cleanup-train": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-left-arm-pick-green-gear": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-left-arm-pick-grey-gear": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-left-arm-pick-red-gear": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-left-arm-pick-white-object": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-leftarm-red-gear-pickshowplace_brownsmallyellow": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-leftarm-red-gear-pickshowplace_greyyellow": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-leftarm-red-gear-pickshowplace_greyyellowbrownsmallyellow": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-leftarm-yellow-gear-pickshowplace_brownsmallyellow": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-leftarm-yellow-gear-pickshowplace_redgreen": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101-leftarm-yellow-gear-pickshowplace_redgreenbrownsmallyellow": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101_dataset3": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101_dataset_marker": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101_dataset_marker_tape_1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101_dataset_merge_marker_tape1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101_dataset_tape": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/SurajChess__so101_dataset_tape1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/Temmp1e__so101_cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/TzuShian__so101_grabchess_250724": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/TzuShian__so101_grabchess_250729": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/TzuShian__so101_grabchess_250924": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/TzuShian__so101_white_chess_20251021": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/YSanYi__so101_push_green_block_into_box": {
+    "slots": {
+      "base_0_rgb": "observation.images.fixed",
+      "left_wrist_0_rgb": "observation.images.handeye",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.fixed",
+      "observation.images.handeye"
+    ]
+  },
+  "external/tier2/ZhangHuTony__so101_pickplace": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/aaron-ser__so101-dice-pickup-dataset": {
+    "slots": {
+      "base_0_rgb": "observation.images.above",
+      "left_wrist_0_rgb": "observation.images.gripper",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.above",
+      "observation.images.gripper"
+    ]
+  },
+  "external/tier2/aaronsu11__so101_fruit": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/aaronsu11__so101_fruit_leisaac": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/abhiloiwal2__multi-so101-pickup": {
+    "slots": {
+      "base_0_rgb": "observation.images.mobile",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.mobile"
+    ]
+  },
+  "external/tier2/aiden-li__so101-close-lower-drawer": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.ego"
+    ]
+  },
+  "external/tier2/aiden-li__so101-close-upper-drawer": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.ego"
+    ]
+  },
+  "external/tier2/aiden-li__so101-grabtissue": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": "observation.images.top"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.ego",
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/aiden-li__so101-open-lower-drawer": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.ego"
+    ]
+  },
+  "external/tier2/aiden-li__so101-open-upper-drawer": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.ego"
+    ]
+  },
+  "external/tier2/anvilbot-patrickhhh__SO101_PickAndPlace_front_wrist": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/anvilbot-patrickhhh__SO101_relocate_cube_2cams_record_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/c299m__so101-pen-in-box-v2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/ceva-automation-sg__smolVLA_so101": {
+    "slots": {
+      "base_0_rgb": "observation.images.context",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.context"
+    ]
+  },
+  "external/tier2/choyf3__so101_test_20250910": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/dleon23__record-so101_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.overhead",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.overhead"
+    ]
+  },
+  "external/tier2/fbeltrao__so101_multi_task_v2": {
+    "slots": {
+      "base_0_rgb": "observation.images.side",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/funXedu__so101_lego_brick": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.gripperR",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.gripperR"
+    ]
+  },
+  "external/tier2/geekscape__lerobot_so101_00": {
+    "slots": {
+      "base_0_rgb": "observation.images.context",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.context",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/geekscape__lerobot_so101_01": {
+    "slots": {
+      "base_0_rgb": "observation.images.context",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.context",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/geekscape__lerobot_so101_test_00": {
+    "slots": {
+      "base_0_rgb": "observation.images.usb",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.usb",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/jrkhf__so101_set_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.top",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/jtz18__so101_table_cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/leesangoh__so101-all-merged": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-pick-and-place-merged": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-pick-and-place-mini-house": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-pick-and-place-owl-figurine": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-pick-and-place-red-bus": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-point-cat-figurine": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-point-cup": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/leesangoh__so101-point-merged": {
+    "slots": {
+      "base_0_rgb": "observation.images.image_front",
+      "left_wrist_0_rgb": "observation.images.image_wrist",
+      "right_wrist_0_rgb": "observation.images.image_left"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.image_wrist",
+      "observation.images.image_front",
+      "observation.images.image_left"
+    ]
+  },
+  "external/tier2/lipsop__so101-block-in-bin-100ep": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/mscwu1__so101_isaac_orange_pick": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/nbirukov__so101_pick_stack_ring_pole": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.sholder"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.sholder",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/nbirukov__so101_pick_up_3c_zone_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.sholder"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.wrist",
+      "observation.images.sholder"
+    ]
+  },
+  "external/tier2/ndelgado__so101_dataset": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/nikodembartnik__so101-task1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.top"
+    ]
+  },
+  "external/tier2/omkarmayekar555__sim_so101_follower_14_OCT_1_6_loc_one_orange": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/peterrolfes__so101_grab_the_screw_big": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/piuslim373__so101-transfer-bottle": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/piuslim373__so101-transfer-bottle1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.top",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.top",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/puneetpanwar__so101-table_cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/puneetpanwar__so101_cube_pickup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/pyflynn__so101_test_1021_v0": {
+    "slots": {
+      "base_0_rgb": "observation.images.fixed",
+      "left_wrist_0_rgb": "observation.images.handeye",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.handeye",
+      "observation.images.fixed"
+    ]
+  },
+  "external/tier2/r-oi__so101_pickplace_cube_100ep_rand-pos": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/r-oi__so101_pickplace_cube_1020_same_place": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.up"
+    ]
+  },
+  "external/tier2/r-oi__so101_pickplace_cube_80ep": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/ricky0526__so101_move_block": {
+    "slots": {
+      "base_0_rgb": "observation.images.side",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/ricky0526__so101_pick_mouse_to_box_v1": {
+    "slots": {
+      "base_0_rgb": "observation.images.side",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/ricky0526__so101_pick_toy_to_plate_v1": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/ricky0526__so101_pick_toy_to_plate_v2": {
+    "slots": {
+      "base_0_rgb": "observation.images.side",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.side",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/rowb1__so101_pick_cup1": {
+    "slots": {
+      "base_0_rgb": "observation.images.area",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.area"
+    ]
+  },
+  "external/tier2/rowb1__so101_pick_cup1_train_final": {
+    "slots": {
+      "base_0_rgb": "observation.images.area",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.area"
+    ]
+  },
+  "external/tier2/rowb1__so101_pick_cup1_validation_final": {
+    "slots": {
+      "base_0_rgb": "observation.images.area",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.area"
+    ]
+  },
+  "external/tier2/rowb1__so101_pick_cup2": {
+    "slots": {
+      "base_0_rgb": "observation.images.area",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.area"
+    ]
+  },
+  "external/tier2/tinkhireeva__so101_pick_place_yellow_objects": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": "observation.images.bottom"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.bottom",
+      "observation.images.up",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/tinkhireeva__so101_pick_place_yellow_objects_10_locations_dima": {
+    "slots": {
+      "base_0_rgb": "observation.images.up",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.up",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/tshiamor__so101-block-side-endeff-only": {
+    "slots": {
+      "base_0_rgb": "observation.images.side",
+      "left_wrist_0_rgb": "observation.images.endeff",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.endeff",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/tshiamor__so101-block-side-front-endeff-only": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.endeff",
+      "right_wrist_0_rgb": "observation.images.side"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.endeff",
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier2/tyrleng__so101-table-cleanup-v21-repaired": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/wantobcm__so101_box2bowl": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.wrist",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/y1y2y3__so101_test8": {
+    "slots": {
+      "base_0_rgb": "observation.images.fixed",
+      "left_wrist_0_rgb": "observation.images.handeye",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.handeye",
+      "observation.images.fixed"
+    ]
+  },
+  "external/tier2/youliangtan__so101-table-cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier2/yuk6ra__so101-onetape-cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.tip",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.tip",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/yuk6ra__so101-pen-cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.tip",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.tip",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/yuk6ra__so101-tapes-cleanup": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.tip",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.tip",
+      "observation.images.front"
+    ]
+  },
+  "external/tier2/yutaro-kimura-acs__so101_pp_blue_box": {
+    "slots": {
+      "base_0_rgb": null,
+      "left_wrist_0_rgb": "observation.images.wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "base_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.wrist"
+    ]
+  },
+  "external/tier3/Grigorij__so-101-duck": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.arm",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.arm"
+    ]
+  },
+  "external/tier3/Grigorij__so-101-duck-filtered": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.arm",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.arm"
+    ]
+  },
+  "external/tier3/Grigorij__so-101-test": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.arm",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.arm"
+    ]
+  },
+  "external/tier3/JulienStocker__so101-cup_pnp_50ep_ver01": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/MCeut__so101_lab_openBin_putCube": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.left",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.left"
+    ]
+  },
+  "external/tier3/Seungyoun__so101-pick-and-place": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/Teddy14__so101_test": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/Teddy14__so101_two_cam": {
+    "slots": {
+      "base_0_rgb": "observation.images.right",
+      "left_wrist_0_rgb": "observation.images.left",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.right",
+      "observation.images.left"
+    ]
+  },
+  "external/tier3/Thytu__so101-object-in-box_v0.4-fixed": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/YDY0427__so101_test_20250708_195723": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/aiden-li__so101-picklego": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.ego"
+    ]
+  },
+  "external/tier3/aiden-li__so101-picktape": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.ego",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.ego"
+    ]
+  },
+  "external/tier3/anvilbot-patrickhhh__SO101_record_test": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/baluatbfl__my-so101arm-dataset": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.right",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.right",
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/fuemocheng__record_so101_mahjong_test01": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/guanfengliu__so101_main_bin_3cameras_1depth": {
+    "slots": {
+      "base_0_rgb": "observation.images.horizon",
+      "left_wrist_0_rgb": "observation.images.arm",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [
+      "observation.images.front_depth"
+    ],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front_depth",
+      "observation.images.horizon",
+      "observation.images.arm"
+    ]
+  },
+  "external/tier3/guanfengliu__so101_main_bin_3cameras_3": {
+    "slots": {
+      "base_0_rgb": "observation.images.horizon",
+      "left_wrist_0_rgb": "observation.images.arm",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [
+      "observation.images.front_depth"
+    ],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front_depth",
+      "observation.images.horizon",
+      "observation.images.arm"
+    ]
+  },
+  "external/tier3/guanfengliu__so101_main_bin_yellow4": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.arm",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.arm"
+    ]
+  },
+  "external/tier3/kagyvro48__so101_dataset1_arracher_la_mauvaise_herbe": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": "observation.images.profil"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side",
+      "observation.images.profil"
+    ]
+  },
+  "external/tier3/mr-dee__dylan-so101-train1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/noraabk__so101-goat-picking-v3": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/omkarmayekar555__so101_test_dataset2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.left",
+      "right_wrist_0_rgb": "observation.images.right"
+    },
+    "masked_slots": [],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 3,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.left",
+      "observation.images.right"
+    ]
+  },
+  "external/tier3/oretti__so101_dice_3": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.sub",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.sub"
+    ]
+  },
+  "external/tier3/oretti__so101_dice_5": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.sub",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.sub"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_Gcube_20sec_200ep_merged_102725": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_Gcube_20sec_50ep_SCP_102725": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_dice_100ep": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_dice_20sec_100ep_101425_merged": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_pen_20sec_400ep_merged_102725": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_pen_20sec_50ep_SCG_102725": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/qm30631122__so101_grab_pen_blocked_20sec_50ep_102425": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/ranegray__so101-drawing-dataset": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/ricky0526__so101_pick_toy_to_plate_v3": {
+    "slots": {
+      "base_0_rgb": "observation.images.side",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/ricky0526__so101_pick_toy_to_plate_v4": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.side",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.side"
+    ]
+  },
+  "external/tier3/rl26-world-models__so101-task2-720p-whole-arm-v4-fresh": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/sabinMlminator__so101_pickplace_cubes_test1": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": "observation.images.rs",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.front",
+      "observation.images.rs"
+    ]
+  },
+  "external/tier3/shimazukosen__so101_record_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/yutaro-kimura-acs__so101_pp_blue_and_red": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier3/zz4321__so101_grasp_rubic": {
+    "slots": {
+      "base_0_rgb": "observation.images.front",
+      "left_wrist_0_rgb": null,
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.front"
+    ]
+  },
+  "external/tier2b/CnLori__so101_grab_cube": {
+    "slots": {
+      "base_0_rgb": "observation.images.head",
+      "left_wrist_0_rgb": "observation.images.hand",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.head",
+      "observation.images.hand"
+    ]
+  },
+  "external/tier2b/CnLori__so101_pickup_cube": {
+    "slots": {
+      "base_0_rgb": "observation.images.head",
+      "left_wrist_0_rgb": "observation.images.hand",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.head",
+      "observation.images.hand"
+    ]
+  },
+  "external/tier2b/brcg3__so101_test_2": {
+    "slots": {
+      "base_0_rgb": "observation.images.OBS_IMAGE_2",
+      "left_wrist_0_rgb": "observation.images.OBS_IMAGE_1",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [
+      "observation.images.OBS_IMAGE_2",
+      "observation.images.OBS_IMAGE_1"
+    ],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.OBS_IMAGE_2",
+      "observation.images.OBS_IMAGE_1"
+    ]
+  },
+  "external/tier2b/lucasfv__so101_finetuning": {
+    "slots": {
+      "base_0_rgb": "observation.images.out",
+      "left_wrist_0_rgb": "observation.images.robo",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.robo",
+      "observation.images.out"
+    ]
+  },
+  "external/tier2b/sabinMlminator__so101_pickplace_cubes_test2": {
+    "slots": {
+      "base_0_rgb": "observation.images.camera1",
+      "left_wrist_0_rgb": "observation.images.camera2",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [
+      "observation.images.camera1",
+      "observation.images.camera2"
+    ],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.camera1",
+      "observation.images.camera2"
+    ]
+  },
+  "self/pick_place_blue_pen_v1": {
+    "slots": {
+      "base_0_rgb": "observation.images.cam_top",
+      "left_wrist_0_rgb": "observation.images.cam_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.cam_top",
+      "observation.images.cam_wrist"
+    ]
+  },
+  "self/pickandplace_bluecube_whitecup": {
+    "slots": {
+      "base_0_rgb": "observation.images.cam_top",
+      "left_wrist_0_rgb": "observation.images.cam_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.cam_top",
+      "observation.images.cam_wrist"
+    ]
+  },
+  "self/pickandplace_greencube_whitecup": {
+    "slots": {
+      "base_0_rgb": "observation.images.cam_top",
+      "left_wrist_0_rgb": "observation.images.cam_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.cam_top",
+      "observation.images.cam_wrist"
+    ]
+  },
+  "self/skill_earser_move_v3_followercal": {
+    "slots": {
+      "base_0_rgb": "observation.images.cam_top",
+      "left_wrist_0_rgb": "observation.images.cam_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.cam_top",
+      "observation.images.cam_wrist"
+    ]
+  },
+  "self/skill_eraser_move_v2": {
+    "slots": {
+      "base_0_rgb": null,
+      "left_wrist_0_rgb": "observation.images.cam_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "base_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 1,
+    "raw_cams": [
+      "observation.images.cam_wrist"
+    ]
+  },
+  "self/stack_cube_normalized": {
+    "slots": {
+      "base_0_rgb": "observation.images.cam_top",
+      "left_wrist_0_rgb": "observation.images.cam_wrist",
+      "right_wrist_0_rgb": null
+    },
+    "masked_slots": [
+      "right_wrist_0_rgb"
+    ],
+    "dropped_cams": [],
+    "ambig_cams": [],
+    "n_present": 2,
+    "raw_cams": [
+      "observation.images.cam_top",
+      "observation.images.cam_wrist"
+    ]
+  }
+}

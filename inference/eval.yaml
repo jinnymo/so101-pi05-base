@@ -1,0 +1,42 @@
+# Closed-loop evaluation configuration for so101-pi05-base, step 40000.
+# Annotated in ../docs/06-inference.md section 5; the four values that differ from the
+# checkpoint's own config.json are collected in section 7 with the reasoning for each.
+# Replace every <...> placeholder before use.
+
+robot:
+  type: so101_follower
+  port: <serial_port>                   # follower arm, e.g. /dev/ttyACM0; `ls /dev/ttyACM*`
+  id: <robot_id>                        # selects <calibration_dir>/<robot_id>.json
+  calibration_dir: <path/to/calibration>
+  cameras:
+    base_0_rgb:                         # overhead / external view
+      type: opencv
+      index_or_path: <overhead_node>    # e.g. /dev/video0; identify by capturing a frame (5.4)
+      fourcc: MJPG
+      width: 640
+      height: 480
+      fps: 30
+    left_wrist_0_rgb:                   # wrist view
+      type: opencv
+      index_or_path: <wrist_node>       # e.g. /dev/video2; swapping the two raises nothing
+      fourcc: MJPG
+      width: 640
+      height: 480
+      fps: 30
+
+policy:
+  path: <CKPT_ROOT>/40000               # directory holding config.json + model.safetensors
+  empty_cameras: 1                      # fills the missing right_wrist_0_rgb slot
+  device: cuda
+  compile_model: true                   # required by inference_overlap_steps > 0
+  n_action_steps: 20                    # re-plan every 20 actions; checkpoint stores 50
+  num_inference_steps: 15               # checkpoint stores 10
+
+single_task: "Pick up the green cube block and put it inside the white cup."
+
+fps: 30
+control_time_s: 600
+display_data: false
+play_sounds: false
+action_quant_ratio: 1
+inference_overlap_steps: 8

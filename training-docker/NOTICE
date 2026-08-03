@@ -1,0 +1,102 @@
+SO-101 pi0.5 base training stack
+Copyright 2026 Dongyoon Kim
+
+This product includes software developed by third parties, listed below. Each
+third-party component keeps its own copyright notice; all of them are licensed
+under the Apache License, Version 2.0, a copy of which is in the LICENSE file.
+
+--------------------------------------------------------------------------------
+Third-party components
+--------------------------------------------------------------------------------
+
+vlash
+  https://github.com/mit-han-lab/vlash
+  Copyright 2025 VLASH team. All rights reserved.
+  Licensed under the Apache License, Version 2.0.
+  Cloned at build time and pinned to commit
+  22cbabfee0f57874987c75a35a7dac129e695db0. Three of its files are replaced by
+  the modified copies in patched/, listed below.
+
+LeRobot
+  https://github.com/huggingface/lerobot
+  Copyright 2024 The HuggingFace Inc. team. All rights reserved.
+  Licensed under the Apache License, Version 2.0.
+  Installed as a transitive dependency of vlash (version 0.4.1). One of its
+  files is replaced by the modified copy in patched/, listed below.
+
+openpi
+  https://github.com/Physical-Intelligence/openpi
+  Copyright Physical Intelligence.
+  Licensed under the Apache License, Version 2.0.
+  The pi0.5 model implementation in vlash derives from openpi, including the
+  OpenPI-to-vlash weight key mapping, so patched/modeling_pi05.py carries that
+  lineage as well.
+
+--------------------------------------------------------------------------------
+Modified files
+--------------------------------------------------------------------------------
+
+Every file below carries a "Modified from ..." header naming its upstream and
+its changes. Modifications are Copyright 2026 Dongyoon Kim, released under the
+Apache License, Version 2.0.
+
+patched/train.py
+  Upstream: vlash/train.py (vlash, commit 22cbabf)
+  - Added module-level _resize_with_pad / _resize_with_pad_then_aug, which
+    letterbox every camera frame to 224x224. Injected as image_transforms only
+    when the dataset carries "<camera>_mask" columns, so mixed-resolution
+    sources can be collated without re-encoding any video.
+  - Checkpointing on the LoRA branch: save adapters only, skipping the merged
+    model weights and the training state, and export the normalization buffers
+    to normalize_buffers.pt.
+  - Added S3 resume/archive uploads and a local rolling prune, driven by the
+    SLOT_ID, S3_CKPT_BASE and RESUME_FREQ environment variables. Inactive when
+    those variables are unset.
+  - Pin the W&B run id and job name to the slot id and force resume="allow"
+    when an S3 slot is configured, so a restarted preemptible instance appends
+    to the same run.
+
+patched/modeling_pi05.py
+  Upstream: vlash/policies/pi05/modeling_pi05.py (vlash, commit 22cbabf)
+  - Drop "<camera>_mask" columns from config.input_features so normalization
+    cannot alter the 0/1 flags.
+  - prepare_images reads "<camera>_mask" per sample and uses it as the image
+    attention mask, instead of marking every image valid.
+  - Load the PaliGemma tokenizer from a local directory, taken from
+    VLASH_PALIGEMMA_PATH, instead of the Hugging Face hub or cache.
+
+patched/run.py
+  Upstream: vlash/run.py (vlash, commit 22cbabf)
+  - Blend action chunk boundaries with a linear ramp over the overlap window.
+  - validate_robot_cameras accepts a robot camera set that is a subset of the
+    policy's image features instead of requiring an exact match, so a two-camera
+    robot can run a three-slot policy. A camera the policy does not know still
+    raises ValueError.
+  - run_loop honours VLASH_DRY_RUN=1 (predict without sending actions) and
+    aborts when a joint exceeds VLASH_SAFE_DEG degrees.
+  - load_and_compile_policy loads adapter-only checkpoints (base weights plus a
+    LoRA merge) and restores dataset statistics from normalize_buffers.pt.
+
+patched/video_utils.py
+  Upstream: lerobot/datasets/video_utils.py (LeRobot 0.4.1)
+  - VideoDecoderCache is bounded by an LRU of VLASH_DECODER_CACHE_MAX entries
+    (default 64) and closes the file handle on eviction. The upstream cache is
+    unbounded and grows without limit over a long run across many videos
+    (upstream issues #2371, #3712).
+  - decode_video_frames_torchcodec logs the offending video path and falls back
+    to frame 0 on a decoder error, instead of aborting the training run.
+
+--------------------------------------------------------------------------------
+Model weights and tokenizer
+--------------------------------------------------------------------------------
+
+The image downloads the pi0.5 base weights (lerobot/pi05_base) at build time.
+Those weights are covered by their own upstream terms, not by this license.
+
+The PaliGemma tokenizer (google/paligemma-3b-pt-224) is not included in this
+package. It is a gated repository, distributed by Google under the Gemma terms
+of use. Fetch it yourself with scripts/fetch-tokenizer.sh after accepting those
+terms and being granted access.
+
+Anyone redistributing an image built from this package should ship this NOTICE
+file and the LICENSE file alongside it.

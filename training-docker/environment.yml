@@ -1,0 +1,38 @@
+name: vlash
+# Follows the vlash install guide:
+#   conda install ffmpeg=7.1.1 -c conda-forge   <- the ffmpeg pin below
+#   pip install -U torch torchvision torchcodec  <- the pip pins below
+# Matching the reference environment:
+#   - torch 2.7.1+cu126 / torchvision 0.22.1+cu126 come from pip wheels, not a
+#     conda channel
+#   - torchcodec 0.5 comes from PyPI
+#   - ffmpeg 7.1.1 is the conda-forge gpl build
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - pip
+  - cmake             # some lerobot native dependencies need it to build
+  - ffmpeg=7.1.*      # torchcodec links against libavutil.so.59 (ffmpeg 7)
+  - pip:
+      # torch stack, pinned to the reference environment. Without the pins,
+      # `pip install -e /opt/vlash` resolves whatever satisfies lerobot 0.4.1
+      # (torch>=2.2.1,<2.8.0 / torchvision>=0.21.0,<0.23.0 / torchcodec>=0.2.1,<0.6.0),
+      # so the build is not reproducible. Installing them here, before vlash,
+      # makes the later resolve a no-op.
+      #
+      # No --extra-index-url: these are the default PyPI wheels. The reference
+      # environment has distribution version 2.7.1 / 0.22.1 while the runtime
+      # reports 2.7.1+cu126 / 0.22.1+cu126, which is the PyPI build (the
+      # download.pytorch.org cu126 index publishes 2.7.1+cu126 as the
+      # distribution version). CUDA 12.6 runtime libraries come with the wheel
+      # as nvidia-*-cu12 12.6.x, so the cu121 base image does not constrain it.
+      - torch==2.7.1
+      - torchvision==0.22.1
+      - torchcodec==0.5
+      # Extra dataset dependencies vlash does not declare.
+      # transformers / peft / bitsandbytes stay unpinned here: vlash pins them
+      # itself (transformers to a git revision).
+      - huggingface_hub
+      - gdown

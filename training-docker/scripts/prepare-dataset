@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+# Usage: prepare-dataset <url>
+# Stdout: local path of the prepared dataset
+# Stderr: progress
+
+set -euo pipefail
+
+URL="${1:?Usage: prepare-dataset <url>}"
+CACHE_DIR="${CACHE_DIR:-/workspace/.cache/datasets}"
+mkdir -p "$CACHE_DIR"
+
+HASH=$(echo -n "$URL" | sha256sum | head -c 16)
+TARGET="$CACHE_DIR/$HASH"
+
+if [[ -d "$TARGET" && -f "$TARGET/.complete" ]]; then
+    echo "[prepare-dataset] cache hit: $TARGET" >&2
+    echo "$TARGET"
+    exit 0
+fi
+
+mkdir -p "$TARGET"
+
+case "$URL" in
+    /*|./*|~*)
+        REAL_PATH="${URL/#\~/$HOME}"
+        if [[ -d "$REAL_PATH" ]]; then
+            echo "[prepare-dataset] local path: $REAL_PATH (cache bypassed)" >&2
+            echo "$REAL_PATH"
+            exit 0
+        else
+            echo "[prepare-dataset] local path not found: $REAL_PATH" >&2
+            exit 1
+        fi
+        ;;
+
+    sftp://*)
+        echo "[prepare-dataset] SFTP download: $URL -> $TARGET" >&2
+        REMOTE=$(echo "$URL" | sed 's|sftp://||')
+        if [[ -n "${SFTP_PASSWORD:-}" ]]; then
+            sshpass -p "$SFTP_PASSWORD" scp -r -o StrictHostKeyChecking=no \
+                "$REMOTE" "$TARGET/" >&2
+        else
+            scp -r -o StrictHostKeyChecking=no "$REMOTE" "$TARGET/" >&2
+        fi
+        # scp nests the remote directory name inside $TARGET; flatten one level
+        SUBDIR=$(find "$TARGET" -mindepth 1 -maxdepth 1 -type d | head -1)
+        if [[ -n "$SUBDIR" ]]; then
+            mv "$SUBDIR"/* "$TARGET/" 2>/dev/null || true
+            rmdir "$SUBDIR" 2>/dev/null || true
+        fi
+        ;;
+
+    https://drive.google.com/*)
+        echo "[prepare-dataset] Google Drive download: $URL -> $TARGET" >&2
+        if [[ "$URL" == *"/folders/"* ]]; then
+            gdown --folder "$URL" -O "$TARGET" --remaining-ok >&2
+            # gdown may nest the folder one level deeper; flatten it
+            SUBDIR=$(find "$TARGET" -mindepth 1 -maxdepth 1 -type d | head -1)
+            if [[ -n "$SUBDIR" ]] && [[ $(find "$TARGET" -mindepth 1 -maxdepth 1 -type d | wc -l) -eq 1 ]]; then
+                mv "$SUBDIR"/* "$TARGET/" 2>/dev/null || true
+                rmdir "$SUBDIR" 2>/dev/null || true
+            fi
+        else
+            # file URL, assumed to be a zip archive
+            gdown "$URL" -O "$TARGET/dataset.zip" >&2
+            unzip -q "$TARGET/dataset.zip" -d "$TARGET" >&2
+            rm "$TARGET/dataset.zip"
+        fi
+        ;;
+
+    s3://*)
+        echo "[prepare-dataset] S3 sync: $URL -> $TARGET" >&2
+        aws s3 sync "$URL" "$TARGET" >&2
+        ;;
+
+    hf://*)
+        echo "[prepare-dataset] Hugging Face download: $URL -> $TARGET" >&2
+        REPO_ID=$(echo "$URL" | sed 's|hf://||')
+        python -c "
+from huggingface_hub import snapshot_download
+snapshot_download('$REPO_ID', repo_type='dataset', local_dir='$TARGET')
+" >&2
+        ;;
+
+    *)
+        echo "[prepare-dataset] unknown URL scheme: $URL" >&2
+        echo "[prepare-dataset]   supported: local path / sftp:// / https://drive.google.com / s3:// / hf://" >&2
+        exit 1
+        ;;
+esac
+
+touch "$TARGET/.complete"
+echo "[prepare-dataset] done: $TARGET" >&2
+echo "$TARGET"

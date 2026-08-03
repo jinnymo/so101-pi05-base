@@ -1,0 +1,189 @@
+#!/usr/bin/env bash
+# Usage: train-base --dataset-url=<unified 3-slot dataset> [options]
+#
+# Full fine-tune of pi0.5 on a unified 3-slot dataset (lora.enable=false).
+#
+# Checkpoints: local full checkpoints (auto-resume, 2 rolling kept). When
+# S3_CKPT_BASE is set, every save also uploads a model-only archive copy. Full
+# resume state (optimizer included) is not uploaded, because this wrapper
+# assumes on-demand instances. After a host failure, restart from the latest
+# archive with --init-checkpoint.
+
+set -eo pipefail
+
+export USER="${USER:-root}"
+export LOGNAME="${LOGNAME:-root}"
+export HOME="${HOME:-/workspace}"
+
+export XDG_CACHE_HOME="/workspace/.cache"
+export TRITON_CACHE_DIR="/workspace/.cache/triton"
+export TORCHINDUCTOR_CACHE_DIR="/workspace/.cache/torch_inductor"
+export TORCH_HOME="/workspace/.cache/torch"
+export HF_HOME="/workspace/.cache/huggingface"
+export TRANSFORMERS_CACHE="/workspace/.cache/transformers"
+export MPLCONFIGDIR="/workspace/.cache/matplotlib"
+# Skipped for --help, so the usage text also works outside the container where
+# /workspace does not exist.
+case " $* " in
+    *" --help "*|*" -h "*) ;;
+    *) mkdir -p "$XDG_CACHE_HOME" "$TRITON_CACHE_DIR" "$TORCHINDUCTOR_CACHE_DIR" \
+                "$TORCH_HOME" "$HF_HOME" "$TRANSFORMERS_CACHE" "$MPLCONFIGDIR" ;;
+esac
+
+# Defaults target A100 80GB x 8: per-GPU batch 8 x 8 GPUs x grad_accum 4 = 256.
+DATASET_URL=""
+BATCH_SIZE="8"
+GRAD_ACCUM="4"
+SAVE_FREQ=""
+STEPS="40000"
+OUTPUT_DIR=""
+WANDB_PROJECT=""
+WARMUP_STEPS=""
+PEAK_LR="5e-5"
+RUN_ID=""
+INIT_CHECKPOINT=""
+
+usage() {
+    cat <<EOF
+Usage: train-base [OPTIONS]
+
+Required:
+  --dataset-url=URL        unified 3-slot dataset
+                           (local path / s3:// / hf:// / sftp:// / Google Drive)
+
+Optional (defaults target A100 80GB x 8):
+  --batch-size=N           default: 8   (per GPU; effective = batch x GPUs x grad_accum)
+  --grad-accum-steps=N     default: 4   (8 x 8 GPUs x 4 = effective 256)
+  --lr=LR                  default: 5e-5   (full fine-tune peak LR)
+  --steps=N                default: 40000
+  --save-freq=N            default: steps/10 (about 10 checkpoints)
+  --warmup-steps=N         default: max(steps x 2.5%, 1000)
+  --output-dir=PATH        default: /workspace/checkpoints/<dataset_name>
+  --wandb-project=NAME     enable W&B logging under this project
+  --run-id=ID              S3 archive slot (default: dataset name).
+                           Uploads only when S3_CKPT_BASE is set.
+  --init-checkpoint=URL    warm restart: download an archived model and override
+                           policy.pretrained_path with it
+
+Example:
+  train-base --dataset-url=s3://<YOUR_BUCKET>/<DATASET_PREFIX> \\
+      --batch-size=8 --grad-accum-steps=4 --lr=5e-5 --steps=40000 \\
+      --wandb-project=<WANDB_PROJECT>
+EOF
+}
+
+if [[ $# -eq 0 ]]; then
+    usage
+    exit 0
+fi
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --help|-h) usage; exit 0 ;;
+        --dataset-url=*) DATASET_URL="${1#*=}"; shift ;;
+        --batch-size=*) BATCH_SIZE="${1#*=}"; shift ;;
+        --grad-accum-steps=*) GRAD_ACCUM="${1#*=}"; shift ;;
+        --lr=*) PEAK_LR="${1#*=}"; shift ;;
+        --save-freq=*) SAVE_FREQ="${1#*=}"; shift ;;
+        --steps=*) STEPS="${1#*=}"; shift ;;
+        --output-dir=*) OUTPUT_DIR="${1#*=}"; shift ;;
+        --wandb-project=*) WANDB_PROJECT="${1#*=}"; shift ;;
+        --warmup-steps=*) WARMUP_STEPS="${1#*=}"; shift ;;
+        --run-id=*) RUN_ID="${1#*=}"; shift ;;
+        --init-checkpoint=*) INIT_CHECKPOINT="${1#*=}"; shift ;;
+        *) echo "Unknown option: $1" >&2; usage; exit 1 ;;
+    esac
+done
+
+[[ -z "$DATASET_URL" ]] && { echo "--dataset-url is required" >&2; usage; exit 1; }
+
+if [[ -z "$WARMUP_STEPS" ]]; then
+    WARMUP_STEPS=$((STEPS * 25 / 1000))
+    [[ "$WARMUP_STEPS" -lt 1000 ]] && WARMUP_STEPS=1000
+fi
+
+if [[ -z "$SAVE_FREQ" ]]; then
+    SAVE_FREQ=$((STEPS / 10))
+    [[ "$SAVE_FREQ" -lt 1 ]] && SAVE_FREQ=1
+fi
+
+# GPU count, for the summary below only. The launcher itself is `vlash train`,
+# which detects GPUs and sets accelerate --num_processes on its own.
+if [[ -n "${CUDA_VISIBLE_DEVICES:-}" ]]; then
+    NUM_GPUS=$(echo "$CUDA_VISIBLE_DEVICES" | tr ',' '\n' | grep -c .)
+else
+    NUM_GPUS=$(nvidia-smi -L 2>/dev/null | grep -c . || echo 1)
+fi
+[[ "$NUM_GPUS" -lt 1 ]] && NUM_GPUS=1
+
+echo "================================================================"
+echo " base full fine-tune wrapper (lora.enable=false)"
+echo "================================================================"
+echo " dataset-url    : $DATASET_URL"
+echo " gpus (detected): $NUM_GPUS"
+echo " batch-size/gpu : $BATCH_SIZE"
+echo " grad-accum     : $GRAD_ACCUM"
+echo " effective batch: $((BATCH_SIZE * NUM_GPUS * GRAD_ACCUM))  (batch x gpu x accum)"
+echo " peak-lr        : $PEAK_LR"
+echo " steps          : $STEPS"
+echo " save-freq      : $SAVE_FREQ"
+echo " warmup-steps   : $WARMUP_STEPS"
+echo "================================================================"
+
+echo "[train-base] preparing dataset..."
+DATASET_PATH=$(/opt/scripts/prepare-dataset "$DATASET_URL")
+echo "[train-base] dataset path: $DATASET_PATH"
+
+DATASET_NAME=$(basename "$DATASET_PATH" | sed 's/[^a-zA-Z0-9_-]/_/g' | head -c 50)
+[[ -z "$DATASET_NAME" ]] && DATASET_NAME="base_$(date +%s)"
+echo "[train-base] dataset name: $DATASET_NAME"
+
+# A unified dataset already ships meta/stats.json, so this is normally a no-op.
+/opt/scripts/inject-stats "$DATASET_PATH" \
+    || echo "[train-base] inject-stats skipped (already present or unexpected format)"
+
+OUTPUT_DIR="${OUTPUT_DIR:-/workspace/checkpoints/${DATASET_NAME}}"
+mkdir -p "$OUTPUT_DIR"
+echo "[train-base] output: $OUTPUT_DIR"
+
+YAML_RESOLVED="/tmp/train_${DATASET_NAME}_base.yaml"
+
+if [[ -n "$WANDB_PROJECT" ]]; then
+    WANDB_ENABLE="true"
+else
+    WANDB_ENABLE="false"
+    WANDB_PROJECT="unused"   # placeholder, envsubst needs a value
+fi
+
+# S3 archive slot. S3_CKPT_BASE is injected with docker run -e; without it
+# train.py keeps checkpoints local only.
+export SLOT_ID="${RUN_ID:-$DATASET_NAME}"
+# A full fine-tune does not upload resume state, so push the resume step past
+# the end of training and let only the final step trigger it.
+export RESUME_FREQ="$STEPS"
+
+PRETRAINED_OVERRIDE=""
+if [[ -n "$INIT_CHECKPOINT" ]]; then
+    INIT_PATH=$(/opt/scripts/prepare-dataset "$INIT_CHECKPOINT")
+    PRETRAINED_OVERRIDE="--policy.pretrained_path=$INIT_PATH"
+    echo "[train-base] warm restart from: $INIT_PATH"
+fi
+
+export DATASET_NAME DATASET_PATH BATCH_SIZE GRAD_ACCUM STEPS SAVE_FREQ \
+       OUTPUT_DIR WANDB_ENABLE WANDB_PROJECT WARMUP_STEPS PEAK_LR
+
+envsubst < /opt/configs/base.yaml > "$YAML_RESOLVED"
+echo "[train-base] resolved yaml: $YAML_RESOLVED"
+
+echo "[train-base] starting training (full fine-tune)..."
+source /opt/conda/etc/profile.d/conda.sh
+conda activate vlash
+cd /opt/vlash
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+    /opt/conda/envs/vlash/bin/vlash train "$YAML_RESOLVED" $PRETRAINED_OVERRIDE 2>&1 \
+    | tee "$OUTPUT_DIR/train.log"
+TRAIN_RC=${PIPESTATUS[0]}
+
+echo "[train-base] finished (rc=$TRAIN_RC). checkpoints: $OUTPUT_DIR/checkpoints/"
+exit "$TRAIN_RC"

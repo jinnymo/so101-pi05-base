@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""Generate meta/stats.json for a LeRobot dataset that does not ship one.
+
+Training raises NaN errors when the statistics are missing. Values are computed
+directly from the parquet frame data; camera entries get dummy statistics, which
+the training code overrides anyway when use_imagenet_stats is enabled.
+
+Usage: inject-stats <dataset_root>
+"""
+import json
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+
+def compute_stats(values):
+    arr = np.asarray(values)
+    if arr.ndim == 1:
+        arr = arr[:, None]
+    return {
+        "min": arr.min(axis=0).tolist(),
+        "max": arr.max(axis=0).tolist(),
+        "mean": arr.mean(axis=0).tolist(),
+        "std": arr.std(axis=0).tolist(),
+        "count": [int(len(arr))],
+        "q01": np.quantile(arr, 0.01, axis=0).tolist(),
+        "q10": np.quantile(arr, 0.10, axis=0).tolist(),
+        "q50": np.quantile(arr, 0.50, axis=0).tolist(),
+        "q90": np.quantile(arr, 0.90, axis=0).tolist(),
+        "q99": np.quantile(arr, 0.99, axis=0).tolist(),
+    }
+
+
+def stack_col(col):
+    sample = col.iloc[0]
+    if isinstance(sample, (list, np.ndarray)):
+        return np.stack([np.asarray(v) for v in col.values])
+    return col.values
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: inject-stats <dataset_root>", file=sys.stderr)
+        sys.exit(1)
+    if sys.argv[1] in ("-h", "--help"):
+        print("Usage: inject-stats <dataset_root>")
+        sys.exit(0)
+
+    ds_root = Path(sys.argv[1])
+    out = ds_root / "meta" / "stats.json"
+
+    if out.exists():
+        print(f"[inject-stats] already present: {out} - skipping", file=sys.stderr)
+        return
+
+    info_path = ds_root / "meta" / "info.json"
+    if not info_path.exists():
+        print(f"[inject-stats] info.json not found: {info_path}", file=sys.stderr)
+        sys.exit(1)
+
+    info = json.load(open(info_path))
+    print(f"[inject-stats] dataset: {ds_root}", file=sys.stderr)
+    print(f"  total_episodes: {info.get('total_episodes')}", file=sys.stderr)
+    print(f"  total_frames: {info.get('total_frames')}", file=sys.stderr)
+
+    parquet_files = sorted((ds_root / "data").rglob("episode_*.parquet"))
+    if not parquet_files:
+        # v3.0 layout uses file-*.parquet
+        parquet_files = sorted((ds_root / "data").rglob("file-*.parquet"))
+    if not parquet_files:
+        print("[inject-stats] no parquet files found", file=sys.stderr)
+        sys.exit(1)
+
+    df = pd.concat([pd.read_parquet(p) for p in parquet_files], ignore_index=True)
+    print(f"[inject-stats] parquet files: {len(parquet_files)}, total frames: {len(df)}", file=sys.stderr)
+
+    stats = {}
+
+    # Scalar columns
+    for col in ["timestamp", "frame_index", "task_index", "index", "episode_index"]:
+        if col in df.columns:
+            stats[col] = compute_stats(stack_col(df[col]))
+
+    # Vector columns (state, action)
+    for col in ["observation.state", "action"]:
+        if col in df.columns:
+            stats[col] = compute_stats(stack_col(df[col]))
+
+    # Cameras: dummy values, overridden when use_imagenet_stats is enabled
+    dummy = lambda v: [[[float(v)]] for _ in range(3)]
+    camera_keys = [k for k, v in info.get("features", {}).items() if v.get("dtype") == "video"]
+    for cam in camera_keys:
+        stats[cam] = {
+            "min": dummy(0.0), "max": dummy(1.0),
+            "mean": dummy(0.5), "std": dummy(0.25),
+            "count": [int(len(df))],
+            "q01": dummy(0.05), "q10": dummy(0.15),
+            "q50": dummy(0.5), "q90": dummy(0.85), "q99": dummy(0.95),
+        }
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with open(out, "w") as f:
+        json.dump(stats, f, indent=2)
+
+    print(f"[inject-stats] written: {out}", file=sys.stderr)
+    print(f"  keys: {list(stats.keys())}", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,400 @@
+{
+  "external/tier1/CoRL2026-CSI__SO101-teleop_stack_RGBblock_on_bluedish_150epi_10fps": {
+    "drop_eps": [
+      5,
+      6,
+      7,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      25,
+      26,
+      28,
+      30,
+      31,
+      33,
+      34,
+      35,
+      36,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      60,
+      62,
+      63,
+      64,
+      66,
+      67,
+      69,
+      72,
+      74,
+      76,
+      77,
+      78,
+      79,
+      81,
+      82,
+      83,
+      85,
+      87,
+      88,
+      89,
+      91,
+      93,
+      94,
+      95,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      105,
+      106,
+      108,
+      109,
+      110,
+      111,
+      112,
+      114,
+      116,
+      117,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      126,
+      128,
+      129,
+      132,
+      133,
+      134,
+      137,
+      138,
+      139,
+      140,
+      142,
+      143,
+      145,
+      146,
+      148,
+      149
+    ],
+    "reasons": {
+      "5": "left_wrist duration mismatch video29.1s!=action27.1s (7%)",
+      "6": "left_wrist duration mismatch video26.8s!=action24.6s (9%)",
+      "7": "left_wrist duration mismatch video28.0s!=action25.1s (12%)",
+      "13": "left_wrist duration mismatch video24.2s!=action21.2s (14%)",
+      "15": "left_wrist duration mismatch video26.5s!=action24.7s (7%)",
+      "16": "left_wrist duration mismatch video26.9s!=action24.3s (11%)",
+      "17": "left_wrist duration mismatch video25.9s!=action22.9s (13%)",
+      "18": "left_wrist duration mismatch video25.4s!=action23.4s (9%)",
+      "19": "left_wrist duration mismatch video23.0s!=action21.5s (7%)",
+      "20": "left_wrist duration mismatch video26.8s!=action24.7s (9%)",
+      "21": "left_wrist duration mismatch video24.6s!=action21.7s (13%)",
+      "25": "left_wrist duration mismatch video26.6s!=action23.8s (12%)",
+      "26": "left_wrist duration mismatch video24.9s!=action22.2s (12%)",
+      "28": "left_wrist duration mismatch video24.2s!=action21.9s (11%)",
+      "30": "left_wrist duration mismatch video23.7s!=action21.3s (11%)",
+      "31": "left_wrist duration mismatch video27.2s!=action24.4s (11%)",
+      "33": "left_wrist duration mismatch video25.4s!=action22.8s (11%)",
+      "34": "left_wrist duration mismatch video25.7s!=action24.2s (6%)",
+      "35": "left_wrist duration mismatch video25.9s!=action24.1s (7%)",
+      "36": "left_wrist duration mismatch video24.0s!=action22.0s (9%)",
+      "39": "left_wrist duration mismatch video23.8s!=action22.2s (7%)",
+      "40": "left_wrist duration mismatch video26.2s!=action23.3s (12%)",
+      "41": "left_wrist duration mismatch video25.1s!=action22.8s (10%)",
+      "42": "left_wrist duration mismatch video22.3s!=action21.1s (6%)",
+      "43": "left_wrist duration mismatch video23.5s!=action22.1s (6%)",
+      "44": "left_wrist duration mismatch video25.9s!=action23.3s (11%)",
+      "45": "left_wrist duration mismatch video23.6s!=action21.6s (9%)",
+      "46": "left_wrist duration mismatch video25.4s!=action22.7s (12%)",
+      "47": "left_wrist duration mismatch video25.1s!=action23.6s (6%)",
+      "48": "left_wrist duration mismatch video22.1s!=action20.9s (6%)",
+      "49": "left_wrist duration mismatch video23.4s!=action22.2s (5%)",
+      "50": "left_wrist duration mismatch video24.0s!=action21.5s (12%)",
+      "52": "left_wrist duration mismatch video22.8s!=action21.4s (7%)",
+      "53": "left_wrist duration mismatch video28.1s!=action26.2s (7%)",
+      "54": "left_wrist duration mismatch video22.3s!=action21.1s (6%)",
+      "55": "left_wrist duration mismatch video26.7s!=action25.3s (6%)",
+      "56": "left_wrist duration mismatch video26.1s!=action23.3s (12%)",
+      "57": "left_wrist duration mismatch video24.0s!=action21.8s (10%)",
+      "60": "left_wrist duration mismatch video21.3s!=action19.9s (7%)",
+      "62": "left_wrist duration mismatch video22.6s!=action21.1s (7%)",
+      "63": "left_wrist duration mismatch video23.4s!=action21.7s (8%)",
+      "64": "left_wrist duration mismatch video24.0s!=action21.5s (12%)",
+      "66": "left_wrist duration mismatch video22.9s!=action21.4s (7%)",
+      "67": "left_wrist duration mismatch video24.6s!=action22.6s (9%)",
+      "69": "left_wrist duration mismatch video24.4s!=action22.2s (10%)",
+      "72": "left_wrist duration mismatch video21.7s!=action20.4s (6%)",
+      "74": "left_wrist duration mismatch video24.1s!=action21.6s (12%)",
+      "76": "left_wrist duration mismatch video25.9s!=action22.9s (13%)",
+      "77": "left_wrist duration mismatch video20.8s!=action18.8s (11%)",
+      "78": "left_wrist duration mismatch video25.2s!=action22.3s (13%)",
+      "79": "left_wrist duration mismatch video24.4s!=action23.1s (6%)",
+      "81": "left_wrist duration mismatch video22.3s!=action20.8s (7%)",
+      "82": "left_wrist duration mismatch video22.0s!=action20.6s (7%)",
+      "83": "left_wrist duration mismatch video21.2s!=action20.1s (5%)",
+      "85": "left_wrist duration mismatch video21.5s!=action18.8s (14%)",
+      "87": "left_wrist duration mismatch video21.9s!=action20.0s (9%)",
+      "88": "left_wrist duration mismatch video20.0s!=action19.0s (5%)",
+      "89": "left_wrist duration mismatch video21.7s!=action19.6s (11%)",
+      "91": "left_wrist duration mismatch video21.8s!=action19.3s (13%)",
+      "93": "left_wrist duration mismatch video22.2s!=action19.9s (12%)",
+      "94": "left_wrist duration mismatch video20.6s!=action19.3s (7%)",
+      "95": "left_wrist duration mismatch video21.6s!=action18.9s (14%)",
+      "97": "left_wrist duration mismatch video22.8s!=action19.9s (15%)",
+      "98": "left_wrist duration mismatch video23.5s!=action21.6s (9%)",
+      "99": "left_wrist duration mismatch video23.5s!=action20.9s (12%)",
+      "100": "left_wrist duration mismatch video22.2s!=action19.6s (13%)",
+      "101": "left_wrist duration mismatch video20.2s!=action18.9s (7%)",
+      "102": "left_wrist duration mismatch video22.6s!=action20.3s (11%)",
+      "103": "left_wrist duration mismatch video24.6s!=action22.9s (7%)",
+      "105": "left_wrist duration mismatch video23.3s!=action20.3s (15%)",
+      "106": "left_wrist duration mismatch video21.8s!=action19.4s (12%)",
+      "108": "left_wrist duration mismatch video22.7s!=action19.9s (14%)",
+      "109": "left_wrist duration mismatch video19.5s!=action17.7s (10%)",
+      "110": "left_wrist duration mismatch video20.9s!=action19.3s (8%)",
+      "111": "left_wrist duration mismatch video22.1s!=action19.1s (16%)",
+      "112": "left_wrist duration mismatch video21.6s!=action20.4s (6%)",
+      "114": "left_wrist duration mismatch video21.2s!=action18.5s (15%)",
+      "116": "left_wrist duration mismatch video25.7s!=action23.2s (11%)",
+      "117": "left_wrist duration mismatch video24.0s!=action22.2s (8%)",
+      "119": "left_wrist duration mismatch video22.6s!=action21.4s (6%)",
+      "120": "left_wrist duration mismatch video19.1s!=action17.4s (10%)",
+      "121": "left_wrist duration mismatch video19.5s!=action18.3s (7%)",
+      "122": "left_wrist duration mismatch video20.7s!=action19.1s (8%)",
+      "123": "left_wrist duration mismatch video23.0s!=action20.2s (14%)",
+      "124": "left_wrist duration mismatch video21.8s!=action19.7s (11%)",
+      "126": "left_wrist duration mismatch video24.4s!=action22.4s (9%)",
+      "128": "left_wrist duration mismatch video22.7s!=action19.9s (14%)",
+      "129": "left_wrist duration mismatch video24.1s!=action22.3s (8%)",
+      "132": "left_wrist duration mismatch video35.1s!=action32.9s (7%)",
+      "133": "left_wrist duration mismatch video23.1s!=action20.9s (11%)",
+      "134": "left_wrist duration mismatch video21.8s!=action19.6s (11%)",
+      "137": "left_wrist duration mismatch video23.5s!=action22.2s (6%)",
+      "138": "left_wrist duration mismatch video22.1s!=action19.5s (13%)",
+      "139": "left_wrist duration mismatch video22.9s!=action21.7s (6%)",
+      "140": "left_wrist duration mismatch video21.8s!=action19.8s (10%)",
+      "142": "left_wrist duration mismatch video22.2s!=action19.4s (14%)",
+      "143": "left_wrist duration mismatch video21.0s!=action19.7s (7%)",
+      "145": "left_wrist duration mismatch video25.2s!=action22.6s (12%)",
+      "146": "left_wrist duration mismatch video21.9s!=action20.6s (6%)",
+      "148": "left_wrist duration mismatch video22.8s!=action20.3s (12%)",
+      "149": "left_wrist duration mismatch video27.2s!=action25.3s (8%)"
+    }
+  },
+  "external/tier1/zacapa__SO101_chess_test2_6": {
+    "drop_eps": [
+      23
+    ],
+    "reasons": {
+      "23": "wrist duration mismatch video95.7s!=action29.2s (228%)"
+    }
+  },
+  "external/tier2/5hadytru__so101_grasp_1": {
+    "drop_eps": [
+      90
+    ],
+    "reasons": {
+      "90": "front duration mismatch video30.7s!=action9.1s (238%)"
+    }
+  },
+  "external/tier2/5hadytru__so101_grasp_3": {
+    "drop_eps": [
+      298
+    ],
+    "reasons": {
+      "298": "front duration mismatch video32.2s!=action22.6s (42%)"
+    }
+  },
+  "external/tier2/CrawlAiHuggingFace__multiplied_so101-table-cleanup": {
+    "drop_eps": [
+      23,
+      24,
+      37
+    ],
+    "reasons": {
+      "23": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "24": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "37": "front duration mismatch video18.3s!=action21.2s (14%)"
+    }
+  },
+  "external/tier2/EverNorif__so101_place_orange_isaaclab": {
+    "drop_eps": [
+      2,
+      3,
+      5,
+      7,
+      8,
+      9,
+      12,
+      18,
+      36,
+      52,
+      59,
+      60,
+      72
+    ],
+    "reasons": {
+      "2": "front duration mismatch video11.1s!=action9.9s (12%)",
+      "3": "front duration mismatch video10.4s!=action7.3s (44%)",
+      "5": "front duration mismatch video9.3s!=action8.3s (12%)",
+      "7": "front duration mismatch video9.1s!=action7.2s (25%)",
+      "8": "front duration mismatch video9.9s!=action7.1s (39%)",
+      "9": "front duration mismatch video9.7s!=action8.3s (17%)",
+      "12": "front duration mismatch video11.3s!=action8.7s (29%)",
+      "18": "front duration mismatch video8.1s!=action6.8s (19%)",
+      "36": "front duration mismatch video8.5s!=action6.1s (40%)",
+      "52": "front duration mismatch video8.6s!=action8.0s (7%)",
+      "59": "front duration mismatch video6.4s!=action5.0s (29%)",
+      "60": "front duration mismatch video9.1s!=action7.6s (20%)",
+      "72": "front duration mismatch video8.5s!=action7.4s (14%)"
+    }
+  },
+  "external/tier2/LeRobot-worldwide-hackathon__241-Sushi_Shinkansen_So101-pick_sushi": {
+    "drop_eps": [
+      138,
+      139,
+      142,
+      147,
+      148,
+      149
+    ],
+    "reasons": {
+      "138": "empty ep rows=1",
+      "139": "wrist duration mismatch video0.4s!=action0.4s (8%)",
+      "142": "empty ep rows=1",
+      "147": "empty ep rows=1",
+      "148": "empty ep rows=1",
+      "149": "wrist duration mismatch video0.1s!=action0.1s (33%)"
+    }
+  },
+  "external/tier2/SGPatil__so101-table-cleanup-train": {
+    "drop_eps": [
+      23,
+      24,
+      37
+    ],
+    "reasons": {
+      "23": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "24": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "37": "front duration mismatch video18.3s!=action21.2s (14%)"
+    }
+  },
+  "external/tier2/aiden-li__so101-close-lower-drawer": {
+    "drop_eps": [
+      15,
+      34
+    ],
+    "reasons": {
+      "15": "top duration mismatch video17.0s!=action15.0s (13%)",
+      "34": "top duration mismatch video8.4s!=action7.9s (6%)"
+    }
+  },
+  "external/tier2/aiden-li__so101-grabtissue": {
+    "drop_eps": [
+      69,
+      91
+    ],
+    "reasons": {
+      "69": "front duration mismatch video13.0s!=action3.3s (289%)",
+      "91": "front duration mismatch video12.9s!=action3.5s (271%)"
+    }
+  },
+  "external/tier2/aiden-li__so101-open-lower-drawer": {
+    "drop_eps": [
+      9,
+      13,
+      27,
+      79,
+      123
+    ],
+    "reasons": {
+      "9": "top duration mismatch video9.4s!=action4.6s (104%)",
+      "13": "top duration mismatch video0.6s!=action0.5s (6%)",
+      "27": "top duration mismatch video10.3s!=action9.5s (8%)",
+      "79": "top duration mismatch video10.0s!=action5.3s (91%)",
+      "123": "top duration mismatch video7.1s!=action0.4s (1683%)"
+    }
+  },
+  "external/tier2/aiden-li__so101-open-upper-drawer": {
+    "drop_eps": [
+      4,
+      65,
+      68
+    ],
+    "reasons": {
+      "4": "top duration mismatch video11.5s!=action8.7s (33%)",
+      "65": "top duration mismatch video10.3s!=action9.1s (14%)",
+      "68": "top duration mismatch video10.2s!=action8.3s (23%)"
+    }
+  },
+  "external/tier2/peterrolfes__so101_grab_the_screw_big": {
+    "drop_eps": [
+      72
+    ],
+    "reasons": {
+      "72": "top duration mismatch video0.7s!=action0.6s (5%)"
+    }
+  },
+  "external/tier2/tyrleng__so101-table-cleanup-v21-repaired": {
+    "drop_eps": [
+      23,
+      24
+    ],
+    "reasons": {
+      "23": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "24": "front duration mismatch video0.1s!=action0.1s (50%)"
+    }
+  },
+  "external/tier2/youliangtan__so101-table-cleanup": {
+    "drop_eps": [
+      23,
+      24,
+      37
+    ],
+    "reasons": {
+      "23": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "24": "front duration mismatch video0.1s!=action0.1s (50%)",
+      "37": "front duration mismatch video18.3s!=action21.2s (14%)"
+    }
+  },
+  "external/tier3/noraabk__so101-goat-picking-v3": {
+    "drop_eps": [
+      52,
+      55,
+      71,
+      158
+    ],
+    "reasons": {
+      "52": "front duration mismatch video29.7s!=action26.6s (12%)",
+      "55": "front duration mismatch video29.9s!=action16.3s (83%)",
+      "71": "front duration mismatch video29.6s!=action20.1s (47%)",
+      "158": "front duration mismatch video29.7s!=action19.9s (49%)"
+    }
+  }
+}

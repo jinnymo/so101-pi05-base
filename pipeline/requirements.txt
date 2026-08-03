@@ -1,0 +1,22 @@
+# Dataset pipeline, stages 1 to 10 (01 through 29).
+# Nothing here is version-pinned: these stages only use stable APIs of each package.
+huggingface_hub
+openpyxl
+numpy
+pyarrow
+av
+
+# Stage 9 (28_merge_unified.py) also calls the `ffmpeg` binary to render the black dummy
+# clips for masked camera slots. Install it from your package manager, or pass a path
+# with --ffmpeg.
+
+# Stage 5 (05_convert_v3_to_v2.py) needs LeRobot installed, plus a separate clone of the
+# v3.0 -> v2.1 converter. It is not a pip package; clone it and pass the directory with
+# --converter (or export $CONVERTER):
+#   git clone https://github.com/jinnymo/lerobot-v3-v2-converter
+# It vendors NVIDIA's Isaac-GR00T conversion script, so Isaac-GR00T itself is not needed.
+# lerobot
+
+# Stage 11 (30, 32, 33) runs inside the training environment and needs the full stack:
+# torch, LeRobot and the VLASH training package (and bitsandbytes for 33). See
+# docs/03-training-environment.md; do not install those from this file.

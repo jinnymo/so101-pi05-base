@@ -1,0 +1,119 @@
+so101-pi05-base
+Copyright 2026 Dongyoon Kim
+
+This repository distributes model weights obtained by fully fine-tuning
+Physical Intelligence's pi0.5 vision-language-action model (base checkpoint
+lerobot/pi05_base) on SO-101 and SO-100 robot data.
+
+================================================================================
+Gemma
+================================================================================
+
+Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
+
+pi0.5 is built on PaliGemma, which is a Gemma model. The weights in this
+repository are therefore a Gemma derivative and are governed by the Gemma Terms
+of Use, not by Apache License 2.0.
+
+Full terms:            https://ai.google.dev/gemma/terms
+                       a copy is included in this repository as LICENSE
+Prohibited Use Policy: https://ai.google.dev/gemma/prohibited_use_policy
+
+Anyone who receives or redistributes these weights, or any model derived from
+them, must comply with the Gemma Terms of Use, including the use restrictions in
+Section 3.2 and the Gemma Prohibited Use Policy. If you redistribute these
+weights or a derivative of them, you must pass those use restrictions on to your
+recipients as enforceable provisions, provide your recipients with a copy of the
+Gemma Terms of Use (the LICENSE file in this repository), include this notice
+text, and state in any file you modify that you modified it.
+
+================================================================================
+Apache License 2.0 components
+================================================================================
+
+The weights above were produced and are consumed using the following projects,
+each licensed under the Apache License, Version 2.0. A copy of the license is
+available at http://www.apache.org/licenses/LICENSE-2.0
+
+  openpi
+  Copyright Physical Intelligence
+  https://github.com/Physical-Intelligence/openpi
+  Reference implementation of pi0.5, including the three-slot camera layout
+  (base_0_rgb, left_wrist_0_rgb, right_wrist_0_rgb) and its attention masking.
+
+  VLASH
+  Copyright MIT HAN Lab
+  https://github.com/mit-han-lab/vlash
+  Training and real-time inference stack used to produce and evaluate these
+  weights.
+
+  LeRobot
+  Copyright The HuggingFace Inc. team
+  https://github.com/huggingface/lerobot
+  Dataset format, robot drivers and video decoding.
+
+Modifications made for this work, as required by Apache License 2.0 Section 4(b),
+are described in the README under "Patches to the training and inference stack":
+
+  - vlash/policies/pi05/modeling_pi05.py: exclude keys ending in "_mask" from
+    config.input_features so that normalization does not rescale the 0/1 camera
+    validity flags.
+  - vlash/policies/pi05/modeling_pi05.py: in prepare_images, read
+    observation.images.{slot}_mask from the batch per sample and use it as the
+    image attention mask, falling back to all-ones when the column is absent.
+  - vlash/policies/pi05/modeling_pi05.py: read the PaliGemma tokenizer path from
+    the VLASH_PALIGEMMA_PATH environment variable instead of hardcoding the Hub
+    id "google/paligemma-3b-pt-224". The Hub id remains the default.
+  - vlash/train.py: apply a 224 resize-with-pad image transform when the dataset
+    carries "_mask" columns, so that source datasets of mixed resolution can be
+    collated.
+  - vlash/train.py: on the LoRA branch, save the adapters only, skipping the
+    merged model weights and the training state, and export the normalization
+    buffers to normalize_buffers.pt.
+  - vlash/train.py: upload a rolling resume checkpoint and a permanent archive
+    checkpoint to S3 and prune the local copies, driven by the SLOT_ID,
+    S3_CKPT_BASE and RESUME_FREQ environment variables. Inactive when unset.
+  - vlash/train.py: pin the W&B run id and job name to the slot id and force
+    resume="allow" when an S3 slot is configured, so a restarted preemptible
+    instance appends to the same run.
+  - vlash/run.py: in validate_robot_cameras, accept a subset of the policy's
+    camera slots instead of requiring an exact match, while still rejecting
+    camera keys the policy does not know.
+  - vlash/run.py: add a dry-run mode that computes actions without commanding
+    the motors, and an abort when a commanded action exceeds a magnitude bound.
+  - vlash/run.py: on a chunk switch, linearly blend the first overlap_steps
+    actions of the new action chunk into the last action of the outgoing chunk.
+  - vlash/run.py: in load_and_compile_policy, load adapter-only checkpoints
+    (base weights plus a LoRA merge) and restore the dataset statistics from
+    normalize_buffers.pt.
+  - lerobot/datasets/video_utils.py: bound the video decoder cache as an LRU of
+    VLASH_DECODER_CACHE_MAX entries and close the file handle on eviction, to
+    stop unbounded memory growth over large multi-source datasets.
+  - lerobot/datasets/video_utils.py: in decode_video_frames_torchcodec, log the
+    offending video path and fall back to frame 0 on a decoder error instead of
+    aborting the run.
+
+The four vlash/run.py changes and the tokenizer path change are inference-side.
+The camera-subset change is required to run these weights with fewer than three
+cameras: upstream validate_robot_cameras compares the robot's camera keys against
+the three slots read from the checkpoint and requires an exact match, and it does
+so before empty_cameras is applied. The other inference-side changes are
+optional. The training-side changes are not required for inference.
+
+Apache License 2.0 imposes no conditions on the model weights produced by
+running the above code. The weight license is the Gemma Terms of Use stated in
+the previous section.
+
+================================================================================
+Training data
+================================================================================
+
+The training set was assembled from publicly available SO-101 and SO-100
+datasets on the Hugging Face Hub together with recordings made by the author.
+The released subset of that data contains only source datasets that declare a
+license: 149 from the Hub under apache-2.0, 1 from the Hub under mit, and 6
+recorded by the author and released under apache-2.0. Attribution required by
+Apache License 2.0 Section 4, and a copy of the Apache License 2.0 itself, are
+distributed with the released dataset as ATTRIBUTION.md and LICENSE.
+
+Datasets whose source repository declares no license were not redistributed.
