@@ -100,7 +100,7 @@ three-camera episodes contribute equally.
 | Item | Value |
 |---|---|
 | Method | full fine-tune, no LoRA, all 3.62B parameters trainable |
-| Precision | bfloat16 |
+| Precision | bfloat16 (the action expert's adaRMS conditioning dense layers stay fp32: 97 of 824 tensors, 3.4% of parameters) |
 | Effective batch | 256 (per-GPU 8 x 8 GPUs x grad accumulation 4) |
 | Optimizer | AdamW, betas (0.9, 0.95), weight decay 1e-10, grad clip norm 1.0 |
 | Learning rate | peak 5e-5, cosine decay to 2.5e-6 |
@@ -116,8 +116,10 @@ last 300 steps: 0.0006). Gradient norm settled around 0.058 after warmup. No cra
 NaN losses.
 
 The `config.json` shipped with the checkpoint carries the policy-level optimizer defaults
-(`optimizer_lr`, `optimizer_weight_decay`, `scheduler_decay_steps`), which are not the values
-used for this run. The table above is authoritative.
+(`optimizer_lr`, `optimizer_weight_decay`, `scheduler_decay_steps`), which are not the values used
+for this run; the same defaults appear again inside the `policy` block of `train_config.json`. The
+run used the top-level `optimizer` and `scheduler` blocks of `train_config.json`, which is what
+`use_policy_training_preset: false` selects. The table above is authoritative.
 
 ## Training data
 
@@ -594,6 +596,11 @@ Released with this checkpoint:
 
 - [`dongyoonkim/so101-pi05-base-dataset`](https://huggingface.co/datasets/dongyoonkim/so101-pi05-base-dataset),
   the licensed subset of the corpus this checkpoint was trained on.
+- [jinnymo/so101-pi05-base](https://github.com/jinnymo/so101-pi05-base) - the full package: the
+  dataset-construction pipeline, the training container, and seven documents covering the build,
+  the training run, troubleshooting, inference and LoRA fine-tuning. The files this card refers to
+  under `scripts/` and `training-docker/patched/` are mirrored here for convenience; the repository
+  holds the rest.
 
 Built on:
 

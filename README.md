@@ -49,7 +49,7 @@ were therefore one decision rather than two.
 ## Start here
 
 [`docs/01-overview.md`](docs/01-overview.md) — what was built, the result, the pipeline in
-order, hardware and account requirements, and cost. The other five documents go stage by stage:
+order, hardware and account requirements, and cost. The other six documents go stage by stage:
 
 | Document | Covers |
 |---|---|
@@ -58,6 +58,9 @@ order, hardware and account requirements, and cost. The other five documents go 
 | [`docs/04-training-execution.md`](docs/04-training-execution.md) | instance setup, data staging, launch command, every hyperparameter, monitoring |
 | [`docs/05-troubleshooting.md`](docs/05-troubleshooting.md) | the problems that actually occurred, with the diagnosis path for each |
 | [`docs/06-inference.md`](docs/06-inference.md) | robot and camera setup, checkpoint layout, runtime options, evaluation, limitations |
+| [`docs/07-lora-finetuning.md`](docs/07-lora-finetuning.md) | using the checkpoint: data requirements, GPU choice, the LoRA config, the normalization-statistics trap, adapter inference, checkpoint selection, cost |
+
+02 through 05 build the base. 07 uses it.
 
 ## Verified environment
 
@@ -188,10 +191,24 @@ check 4:
 `docs/06-inference.md` covers the live run from here, and `model/README.md` covers what the
 checkpoint is and is not for.
 
+### Then what
+
+The checkpoint on its own does one thing: it knows the SO-101. Running it as-is reproduces the
+evaluation in `docs/06-inference.md` on the task that happened to be in its training corpus, and
+that is the end of what it does unassisted. The point of a domain-adaptation base is the next
+step — a LoRA adapter trained on demonstrations of your own task, on top of these weights, which
+is a run measured in hours on one rented GPU rather than the 40 hours on eight A100s that
+produced the base. [`docs/07-lora-finetuning.md`](docs/07-lora-finetuning.md) is that procedure
+end to end: how much data, which GPU and why, the training config, the launch command, and the
+adapter-checkpoint failure that turns every action into `nan` at inference without raising
+anything.
+
 ## Contents
 
 ```
-docs/                     the six documents above
+docs/                     the seven documents above
+  01-overview.md            .. 06-inference.md   building and running the base
+  07-lora-finetuning.md     training your own task adapter on top of it
 model/                    model card, license, notice
 dataset/                  dataset card, per-source attribution, license
 pipeline/                 the dataset-construction scripts, one per stage

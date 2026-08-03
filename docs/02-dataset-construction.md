@@ -149,7 +149,7 @@ back off and retry). From those plus the index entry:
 | `n_cam`, `cam_keys`, `has_depth` | info.json keys under `observation.images` | stage 2 blacklist, stage 6 mapping |
 | `episodes`, `frames`, `fps` | info.json totals | size screening |
 | `tasks` | tasks.jsonl, first 8 unique | language instruction survey |
-| `is_variant` | id matches `merged|multiplied|trimmed|converted|_copy|backup|eval_` | duplicate hint |
+| `is_variant` | id matches `merged\|multiplied\|trimmed\|converted\|_copy\|backup\|eval_` | duplicate hint |
 | `score` | `min(ep,300) + whitelist_cams*20 + min(downloads,400)/4`, minus penalties | sheet ordering only |
 
 **Pass criterion.** A repository enters the catalog if `meta/info.json` parses and
@@ -539,7 +539,7 @@ and unit, per-joint global range, and four quality counters.
 |---|---|---|
 | `traj_max_jump`, `n_anomaly_ep` | max per-frame action delta > 50 degrees | discontinuity, teleoperation glitch, or bad splice |
 | `n_static_ep` | every joint's range within the episode < 5 degrees | empty or frozen episode |
-| `n_desync_ep` | mean per-episode `|action - state|` > 10 degrees | action and state out of sync |
+| `n_desync_ep` | mean per-episode `\|action - state\|` > 10 degrees | action and state out of sync |
 | `range_warn` | joint span > 320 degrees, or < 1 degree on a non-gripper joint | implausible range, or a stuck joint |
 
 Plus a video check that decodes the first ten frames of a representative camera and
