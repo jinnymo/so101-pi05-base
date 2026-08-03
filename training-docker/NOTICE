@@ -62,8 +62,10 @@ patched/modeling_pi05.py
     cannot alter the 0/1 flags.
   - prepare_images reads "<camera>_mask" per sample and uses it as the image
     attention mask, instead of marking every image valid.
-  - Load the PaliGemma tokenizer from a local directory, taken from
-    VLASH_PALIGEMMA_PATH, instead of the Hugging Face hub or cache.
+  - Load the PaliGemma tokenizer from a local directory when
+    VLASH_PALIGEMMA_PATH is set, instead of always going through the Hugging
+    Face hub or cache. The default remains the upstream Hub id, so the change
+    is a no-op unless the variable is set; the training image sets it.
 
 patched/run.py
   Upstream: vlash/run.py (vlash, commit 22cbabf)

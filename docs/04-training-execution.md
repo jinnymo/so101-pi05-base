@@ -110,7 +110,7 @@ section 1.
 
 The actual run used a pre-staged local directory rather than the bucket, because the dataset
 had to be repaired on the instance mid-run: the 450 episodes recorded at 10 fps were filtered
-out and the result re-indexed, which is what the `-v /data/so101_base_30fps` mount in the launch
+out and the result re-indexed, which is what the `-v /data/so101_corpus_30fps` mount in the launch
 command below refers to. Section 10 has the failure that forced it; 02, under "Producing the
 corpus that was actually trained", has the procedure. Passing an absolute path skips the sync
 completely, which is also the fastest option when the node has a persistent volume or the data
@@ -172,7 +172,7 @@ docker run \
   --gpus all \
   --shm-size=64g \
   --ulimit nofile=1048576:1048576 \
-  -v /data/so101_base_30fps:/data/so101_base_30fps:ro \
+  -v /data/so101_corpus_30fps:/data/so101_corpus_30fps:ro \
   -e AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> \
   -e AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY> \
   -e AWS_DEFAULT_REGION=<AWS_REGION> \
@@ -182,7 +182,7 @@ docker run \
   <YOUR_REGISTRY>/pi05-so101-train:latest \
   bash -lc 'aws configure set default.s3.max_concurrent_requests 256 && \
     /opt/scripts/train-base \
-      --dataset-url=/data/so101_base_30fps \
+      --dataset-url=/data/so101_corpus_30fps \
       --run-id=<RUN_ID> \
       --batch-size=8 \
       --grad-accum-steps=4 \

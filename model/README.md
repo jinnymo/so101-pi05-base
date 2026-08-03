@@ -333,7 +333,7 @@ VLASH — it reads the safetensors header and `config.json` with the standard li
 ```bash
 pip install huggingface_hub
 hf download dongyoonkim/so101-pi05-base --local-dir ckpt/so101-pi05-base
-python scripts/verify_checkpoint.py ckpt/so101-pi05-base
+python ckpt/so101-pi05-base/scripts/verify_checkpoint.py ckpt/so101-pi05-base
 ```
 
 `hf` is the current Hugging Face Hub CLI. `huggingface-cli` is deprecated and on

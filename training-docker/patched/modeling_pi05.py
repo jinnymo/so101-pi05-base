@@ -1170,12 +1170,13 @@ class PI05Policy(PreTrainedPolicy):
         )
 
         # Initialize tokenizer and model
-        # [patch] Load the tokenizer from a local path instead of the HF cache, so
-        # HF_HUB_OFFLINE=1 with no network works. The Dockerfile stages the
-        # PaliGemma files at the default path below.
+        # [patch] Allow the tokenizer to come from a local directory, so a run with
+        # HF_HUB_OFFLINE=1 and no network works. The default is the upstream Hub id,
+        # which keeps this a no-op outside a container; the image sets the variable to
+        # the directory where it stages the PaliGemma files.
         _paligemma_path = os.environ.get(
             "VLASH_PALIGEMMA_PATH",
-            "/opt/models/paligemma_tokenizer",
+            "google/paligemma-3b-pt-224",
         )
         self.language_tokenizer = AutoTokenizer.from_pretrained(_paligemma_path)
         self.model = PI05Model(config)
