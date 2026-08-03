@@ -16,9 +16,11 @@ hardware. Untuned output is erratic, and erratic output on a real arm is a hazar
 score. Fine-tuning is the precondition, not an optimization.
 
 That moves the problem to data. A task fine-tune needs demonstrations, and recording them one at a
-time does not get far. This corpus is an attempt to pay that cost once: 156 public SO-101 datasets
-merged into one and used to adapt pi0.5 to the robot rather than to any task, so a task fine-tune
-on top starts from something that already knows the arm.
+time does not get far. This corpus is an attempt to pay that cost once: 181 SO-101 datasets merged
+into one, 17,137 episodes of which 16,687 were fed to the run, used to adapt pi0.5 to the robot
+rather than to any task, so a task fine-tune on top starts from something that already knows the
+arm. The released dataset is the redistributable part of that corpus — 156 sources and 13,969
+episodes, the ones whose upstream repository declares a license.
 
 ### Why pi0.5
 
@@ -38,10 +40,14 @@ problem: the first action of a new chunk does not continue the last action of th
 stationary arm oscillated 1-2 degrees at every chunk boundary, and widening the overlap window to
 533 ms did not remove it, which ruled out latency as the cause.
 
-VLASH samples a random inference delay during training and blends across the chunk boundary at
-run time. That is what removed the oscillation: 75%, 89% and 26% reduction across three joints in
-the hold phase. LeRobot's asynchronous path averages the overlapping actions instead, and the
-average of two valid trajectories is not necessarily a valid trajectory.
+VLASH contributes the two pieces that make overlapping viable: it samples a random inference delay
+during training, so the policy is trained for the condition it will run under, and it runs the next
+inference concurrently with the current chunk. What closed the boundary discontinuity is a patch
+added here — a linear ramp blending the first actions of a new chunk into the last of the old one
+(patch 3.3, `training-docker/patched/run.py`, listed in `training-docker/NOTICE`). That is what
+removed the oscillation: 75%, 89% and 26% reduction across three joints in the hold phase.
+LeRobot's asynchronous path averages the overlapping actions instead, and the average of two valid
+trajectories is not necessarily a valid trajectory.
 
 VLASH supports pi0 and pi0.5, and does not support GR00T. The backbone and the inference stack
 were therefore one decision rather than two.

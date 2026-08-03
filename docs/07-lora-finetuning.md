@@ -77,19 +77,24 @@ left_wrist_0_rgb      wrist view
 right_wrist_0_rgb     never a real second wrist camera in this corpus; masked in most episodes
 ```
 
-Slots are bound **by dataset feature name**, and the name is what carries the meaning. A dataset
-whose cameras are called `cam_top` and `cam_wrist` will train — nothing raises — but the wrist
-stream is no longer the stream the base learned to treat as a wrist view, and the adapter spends
-its capacity relearning a mapping the base already had. That is the whole reason to fine-tune on
-this base rather than on stock pi0.5.
+During training, slots are bound **by position, not by name**. `input_features` comes from
+`dataset_to_policy_features(ds_meta.features)`, which preserves the order the visual features
+appear in `meta/info.json`, and `prepare_images` iterates that order without ever reading the key
+strings. Rename a camera and nothing about training changes; reorder the features and the streams
+change slots silently.
 
-Two ways to get the names right. Either record with LeRobot camera keys already named after the
-slots, which is what `inference/eval.yaml` does for the run side, or rename an existing dataset.
-The names appear in four places and all four have to move together:
+Names matter at inference: the patched `validate_robot_cameras` matches the robot's camera keys
+against the feature names stored in the trained config, so a dataset whose cameras are called
+`cam_top` and `cam_wrist` produces a checkpoint whose config expects a robot with those exact keys.
+
+Both of these have to be right. If the order is wrong the adapter spends its capacity relearning a
+mapping the base already had, and nothing raises. If the names are wrong the run trains fine and
+then fails to start on hardware. The script below fixes both: it renames the keys and rebuilds
+`info["features"]` so the visual features come out in slot order.
 
 ```python
 #!/usr/bin/env python3
-"""Rename LeRobot v2.1 camera keys onto the pi0.5 slots.
+"""Rename LeRobot v2.1 camera keys onto the pi0.5 slots and put them in slot order.
 
 Usage: rename_slots.py <dataset_root> old=new [old=new ...]
 Bare camera names, without the observation.images. prefix.
@@ -98,16 +103,31 @@ import json
 import sys
 from pathlib import Path
 
+SLOTS = ["observation.images.base_0_rgb",
+         "observation.images.left_wrist_0_rgb",
+         "observation.images.right_wrist_0_rgb"]
+
 root = Path(sys.argv[1])
-mapping = {f"observation.images.{a}": f"observation.images.{b}"
-           for a, b in (arg.split("=", 1) for arg in sys.argv[2:])}
+pairs = [arg.split("=", 1) for arg in sys.argv[2:]]
+mapping = {f"observation.images.{a}": f"observation.images.{b}" for a, b in pairs}
+# A merged dataset carries a per-slot validity column; it has to move with its slot.
+mapping.update({f"observation.images.{a}_mask": f"observation.images.{b}_mask"
+                for a, b in pairs})
 
 def rekey(d):
     return {mapping.get(k, k): v for k, v in d.items()}
 
 info = json.loads((root / "meta/info.json").read_text())
-info["features"] = rekey(info["features"])
+feats = rekey(info["features"])
+
+# Training binds slots by position, so emit the visual features in slot order.
+# Only dtype video counts: the per-slot _mask columns are float32 and are not slots.
+visual = [k for k, v in feats.items() if v.get("dtype") == "video"]
+ordered = [k for k in SLOTS if k in visual] + [k for k in visual if k not in SLOTS]
+info["features"] = {**{k: feats[k] for k in feats if k not in visual},
+                    **{k: feats[k] for k in ordered}}
 (root / "meta/info.json").write_text(json.dumps(info, indent=4))
+print("slot order:", " -> ".join(k.split(".")[-1] for k in ordered))
 
 stats = root / "meta/stats.json"
 if stats.exists():
