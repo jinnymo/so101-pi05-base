@@ -2,6 +2,8 @@
 license: gemma
 license_link: https://ai.google.dev/gemma/terms
 base_model: lerobot/pi05_base
+datasets:
+  - dongyoonkim/so101-pi05-base-dataset
 library_name: lerobot
 pipeline_tag: robotics
 tags:
