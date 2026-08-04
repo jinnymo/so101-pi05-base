@@ -22,6 +22,11 @@ datasets collected from the Hugging Face Hub, plus 6 recorded by the author.
 The sources were screened for action-space conformity, deduplicated, and
 rewritten into one schema with a fixed three-camera layout.
 
+> **[github.com/jinnymo/so101-pi05-base](https://github.com/jinnymo/so101-pi05-base)** — the
+> scripts that built this, stage by stage: the Hub crawl, the screening criteria, the
+> action-convention check, the camera-slot mapping, the deduplication, and the merge. The
+> intermediate artifacts ship with them, so the funnel below can be checked rather than trusted.
+
 | | |
 |---|---|
 | Source datasets | 156 |

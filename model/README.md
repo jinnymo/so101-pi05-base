@@ -24,6 +24,12 @@ tags:
 A domain-adapted base checkpoint: Physical Intelligence's **pi0.5** vision-language-action
 model, fully fine-tuned on SO-101 / SO-100 single-arm manipulation data.
 
+> **[github.com/jinnymo/so101-pi05-base](https://github.com/jinnymo/so101-pi05-base)** — how this
+> was built and how to use it. The dataset-construction pipeline, the training container, and
+> seven documents: the corpus build, the training run, the problems that came up and how they
+> were diagnosed, inference on real hardware, and LoRA fine-tuning on top of this checkpoint.
+> Read that before running anything here.
+
 - Base model: [`lerobot/pi05_base`](https://huggingface.co/lerobot/pi05_base)
 - Training / inference stack: [VLASH](https://github.com/mit-han-lab/vlash) (`PI05Policy`)
 - Robot: SO-101 / SO-100, single arm, 6 DoF
